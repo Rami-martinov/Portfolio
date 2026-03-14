@@ -2,12 +2,12 @@ import { useState, useMemo, useRef, useEffect } from "react";
 import { useLightbox } from "./Lightbox";
 import { FadeIn, useInView } from "./ui/motion-css";
 
-import ellie1 from "figma:asset/3899482cc1b7b1822a5307069ccdb3360f243d61.png";
-import ellie2 from "figma:asset/71e2eb490ccf9dca12a29bae658256aeac55cd7d.png";
-import ellie3 from "figma:asset/63a2fe427d997927fc556ad6986e9ec3c5a0805d.png";
-import ellie4 from "figma:asset/10b959aa32e30d28812458464781c2ce7f958620.png";
-import ellie5 from "figma:asset/55fde89a422f1a23db85d616da01cb97fbc9e475.png";
-import ellie6 from "figma:asset/4047aac43d9d307e10237ba5c3794b8b78f2f4d6.png";
+import ellie1 from "@/assets/3899482cc1b7b1822a5307069ccdb3360f243d61.png";
+import ellie2 from "@/assets/71e2eb490ccf9dca12a29bae658256aeac55cd7d.png";
+import ellie3 from "@/assets/63a2fe427d997927fc556ad6986e9ec3c5a0805d.png";
+import ellie4 from "@/assets/10b959aa32e30d28812458464781c2ce7f958620.png";
+import ellie5 from "@/assets/55fde89a422f1a23db85d616da01cb97fbc9e475.png";
+import ellie6 from "@/assets/4047aac43d9d307e10237ba5c3794b8b78f2f4d6.png";
 
 const elliePhotos = [
   { id: 1, src: ellie1, alt: "Baby and dog at sunset park" },

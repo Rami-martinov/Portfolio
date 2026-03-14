@@ -4,21 +4,21 @@ import { ProjectPage } from "../../ProjectPage";
 const PLACEHOLDER =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect width='100%25' height='100%25' fill='%23e5e5e5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='32' fill='%23a3a3a3'%3EImage Placeholder%3C/text%3E%3C/svg%3E";
 
-import approvalGroupsHero from "figma:asset/ed938d14e53fc54316660cb90055cfdf115f5c27.png";
-import approvalGroupsUI from "figma:asset/c46ea4129015d8aef089fb3829303608fa66cbe7.png";
+import approvalGroupsHero from "@/assets/ed938d14e53fc54316660cb90055cfdf115f5c27.png";
+import approvalGroupsUI from "@/assets/c46ea4129015d8aef089fb3829303608fa66cbe7.png";
 
-import mfaHero from "figma:asset/66e2cc557ea63db21fb420d711e739c35bda0057.png";
-import mfaLogin from "figma:asset/af7a8cf1c35410ea3a34f54efe06ed61b12953b4.png";
-import mfaCheckEmail from "figma:asset/3b3f45c1ebb83bc6b4dd03d04c49b8cc90d4e255.png";
-import mfaEmailVerify from "figma:asset/d3d0e27bd2dec2dfe0d9e728db01c609030dcd1c.png";
-import mfaMobileFlow from "figma:asset/c007d6746eb7b20b20919d80e5d9b939a4bca4f8.png";
-import mfaVerifyApp from "figma:asset/dac14be71c6e9f28c10380b298e3a556e00a9b0e.png";
+import mfaHero from "@/assets/66e2cc557ea63db21fb420d711e739c35bda0057.png";
+import mfaLogin from "@/assets/af7a8cf1c35410ea3a34f54efe06ed61b12953b4.png";
+import mfaCheckEmail from "@/assets/3b3f45c1ebb83bc6b4dd03d04c49b8cc90d4e255.png";
+import mfaEmailVerify from "@/assets/d3d0e27bd2dec2dfe0d9e728db01c609030dcd1c.png";
+import mfaMobileFlow from "@/assets/c007d6746eb7b20b20919d80e5d9b939a4bca4f8.png";
+import mfaVerifyApp from "@/assets/dac14be71c6e9f28c10380b298e3a556e00a9b0e.png";
 
-import ipHero from "figma:asset/39239014df6e95095ad0437c6b513e95d34f6adc.png";
-import ipSettings from "figma:asset/e0cc3f8438afe0fec889552f3fc773e8afdf5166.png";
-import ipAllowlist from "figma:asset/764d9133fd0dc9b0c6afb34641d58c53cf59cd60.png";
-import ipAddModal from "figma:asset/b64550e9eac49735dcf753943e02cb5370ee750b.png";
-import ipWorkspace from "figma:asset/297b9533074edd0a1fe9e1dea9b052096b63c39c.png";
+import ipHero from "@/assets/39239014df6e95095ad0437c6b513e95d34f6adc.png";
+import ipSettings from "@/assets/e0cc3f8438afe0fec889552f3fc773e8afdf5166.png";
+import ipAllowlist from "@/assets/764d9133fd0dc9b0c6afb34641d58c53cf59cd60.png";
+import ipAddModal from "@/assets/b64550e9eac49735dcf753943e02cb5370ee750b.png";
+import ipWorkspace from "@/assets/297b9533074edd0a1fe9e1dea9b052096b63c39c.png";
 
 const project = {
   title: "Institutional Access",

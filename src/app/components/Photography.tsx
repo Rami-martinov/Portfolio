@@ -2,17 +2,17 @@ import { useRef, useState } from "react";
 import { useInView, FadeIn } from "./ui/motion-css";
 import { useLightbox } from "./Lightbox";
 
-import photo1 from "figma:asset/c402a2bb97c4b1fdfcda83b79cc4831d678ebabd.png";
-import photo2 from "figma:asset/11cd632c6e064695d7c5b8789d76da68e04d0ac6.png";
-import photo3 from "figma:asset/c9def389613a9409382cdd672808b9a40366dd0a.png";
-import photo4 from "figma:asset/b128a17b880880f8e90cdcb90c9dfa76d37ac401.png";
-import photo5 from "figma:asset/2c730db35db299032c88d12f0e80ef1d15debba5.png";
-import photo6 from "figma:asset/d511bd4646bc98ebe7d32d53e8b67e5898f3e2bd.png";
-import photo7 from "figma:asset/fdb93f643e853de2ffa597a7e553e4ae6170de82.png";
-import photo8 from "figma:asset/55d47c8754458d2b086daec497677ce8859a61bd.png";
-import photo9 from "figma:asset/69c3843ca93b424c6a27d2734151fb266ac27796.png";
-import photo10 from "figma:asset/02fff03db0436642861dd3110bb06f60d6986219.png";
-import photo11 from "figma:asset/4b6a10790a9b85d67d9b69578d459add355db7e5.png";
+import photo1 from "@/assets/c402a2bb97c4b1fdfcda83b79cc4831d678ebabd.png";
+import photo2 from "@/assets/11cd632c6e064695d7c5b8789d76da68e04d0ac6.png";
+import photo3 from "@/assets/c9def389613a9409382cdd672808b9a40366dd0a.png";
+import photo4 from "@/assets/b128a17b880880f8e90cdcb90c9dfa76d37ac401.png";
+import photo5 from "@/assets/2c730db35db299032c88d12f0e80ef1d15debba5.png";
+import photo6 from "@/assets/d511bd4646bc98ebe7d32d53e8b67e5898f3e2bd.png";
+import photo7 from "@/assets/fdb93f643e853de2ffa597a7e553e4ae6170de82.png";
+import photo8 from "@/assets/55d47c8754458d2b086daec497677ce8859a61bd.png";
+import photo9 from "@/assets/69c3843ca93b424c6a27d2734151fb266ac27796.png";
+import photo10 from "@/assets/02fff03db0436642861dd3110bb06f60d6986219.png";
+import photo11 from "@/assets/4b6a10790a9b85d67d9b69578d459add355db7e5.png";
 
 const photos = [
   { id: 1, src: photo1, alt: "Street protest with megaphone" },

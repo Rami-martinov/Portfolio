@@ -3,21 +3,21 @@ import { ImageCarousel } from "../../ImageCarousel";
 import { FadeIn, useInView } from "../../ui/motion-css";
 
 // Bridging carousel images
-import bridgeImg1 from "figma:asset/045343299eb773e178afa2c4b0e429e5766302b7.png";
-import bridgeImg2 from "figma:asset/9140a8c5ff08f8bec1ff51acbad4e63c27c6996d.png";
-import bridgeImg3 from "figma:asset/ed2a6b51c59930b9aac719b57dd1d7c7cfd62e17.png";
-import bridgeImg4 from "figma:asset/b62d8fc87e139aae6b866668461b128e1f6d4672.png";
-import bridgeImg5 from "figma:asset/3437e25df9723ec03e3266bbd9c85015b36e3d36.png";
-import bridgeImg6 from "figma:asset/034aba27a3e8eac40e2a6da8e3c82648e207da25.png";
+import bridgeImg1 from "@/assets/045343299eb773e178afa2c4b0e429e5766302b7.png";
+import bridgeImg2 from "@/assets/9140a8c5ff08f8bec1ff51acbad4e63c27c6996d.png";
+import bridgeImg3 from "@/assets/ed2a6b51c59930b9aac719b57dd1d7c7cfd62e17.png";
+import bridgeImg4 from "@/assets/b62d8fc87e139aae6b866668461b128e1f6d4672.png";
+import bridgeImg5 from "@/assets/3437e25df9723ec03e3266bbd9c85015b36e3d36.png";
+import bridgeImg6 from "@/assets/034aba27a3e8eac40e2a6da8e3c82648e207da25.png";
 
 const bridgingImages = [bridgeImg1, bridgeImg2, bridgeImg3, bridgeImg4, bridgeImg5, bridgeImg6];
 
 // Swap carousel images
-import swapImg1 from "figma:asset/07089908db15ae516eb1920b004cdc618efd8007.png";
-import swapImg2 from "figma:asset/23390c9e05cab1460ace705b32b76977e03ba7e3.png";
-import swapImg3 from "figma:asset/9e12a37f7c1bda0aef40dda8c624a68295f9b842.png";
-import swapImg4 from "figma:asset/f3251ca5665e3f070e7855a51d3f7ce9b0b8c3db.png";
-import swapImg5 from "figma:asset/b8881d2b3d61a6ba31ed8cdb598d4eeaeae86f3a.png";
+import swapImg1 from "@/assets/07089908db15ae516eb1920b004cdc618efd8007.png";
+import swapImg2 from "@/assets/23390c9e05cab1460ace705b32b76977e03ba7e3.png";
+import swapImg3 from "@/assets/9e12a37f7c1bda0aef40dda8c624a68295f9b842.png";
+import swapImg4 from "@/assets/f3251ca5665e3f070e7855a51d3f7ce9b0b8c3db.png";
+import swapImg5 from "@/assets/b8881d2b3d61a6ba31ed8cdb598d4eeaeae86f3a.png";
 
 const swapImages = [swapImg1, swapImg2, swapImg3, swapImg4, swapImg5];
 

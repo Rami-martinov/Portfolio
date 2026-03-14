@@ -3,14 +3,14 @@ import { useLightbox } from "../../Lightbox";
 import { ImageCarousel } from "../../ImageCarousel";
 import { FadeIn, useInView } from "../../ui/motion-css";
 
-import img1 from "figma:asset/8b95f483e6117c3f445bb3819bb9835203d378f2.png";
-import img2 from "figma:asset/8ed0b3dac5bb9079bce7f5786c4cecb82b028fe1.png";
-import img3 from "figma:asset/fe908259f249b64f8727fe17da5667edfeda9674.png";
-import img4 from "figma:asset/9ad7de81ae64c1c5d5fad2fc3a2c951e727120ac.png";
-import img5 from "figma:asset/5999156f39b1a8f5940c0865251279951d62337d.png";
-import img6 from "figma:asset/b4c8bfea6d2d31643332a0d4acf0f15334eff5e4.png";
-import img7 from "figma:asset/81110483671b33d5b6942dfeba40f4bff6d7e821.png";
-import img8 from "figma:asset/592c244ba79bd4c8f45655b956757efe18c246dd.png";
+import img1 from "@/assets/8b95f483e6117c3f445bb3819bb9835203d378f2.png";
+import img2 from "@/assets/8ed0b3dac5bb9079bce7f5786c4cecb82b028fe1.png";
+import img3 from "@/assets/fe908259f249b64f8727fe17da5667edfeda9674.png";
+import img4 from "@/assets/9ad7de81ae64c1c5d5fad2fc3a2c951e727120ac.png";
+import img5 from "@/assets/5999156f39b1a8f5940c0865251279951d62337d.png";
+import img6 from "@/assets/b4c8bfea6d2d31643332a0d4acf0f15334eff5e4.png";
+import img7 from "@/assets/81110483671b33d5b6942dfeba40f4bff6d7e821.png";
+import img8 from "@/assets/592c244ba79bd4c8f45655b956757efe18c246dd.png";
 
 const stakingImages = [img1, img2, img3, img4, img5, img6, img7, img8];
 

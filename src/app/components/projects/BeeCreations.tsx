@@ -1,12 +1,12 @@
 import { ProjectPage } from "../ProjectPage";
 
-import gallery1 from "figma:asset/878d9e7c87b86a926d7535ebda0064838d447918.png";
-import gallery2 from "figma:asset/e35d3a50ef62292d8d8180835bdbddd9b4898499.png";
-import gallery3 from "figma:asset/9072dc94fa7d6947e3557ded0ed34b0c1eb1e16d.png";
-import gallery4 from "figma:asset/ae0fb724333e81b37dee4b39c3d630f221d1aef7.png";
-import gallery5 from "figma:asset/b671d3319d41c67b234f3ac76f721dc03d03e90b.png";
-import gallery6 from "figma:asset/43635cdb5c77aba6eeca73e8557d0b29fdce1f12.png";
-import gallery7 from "figma:asset/5c29cf1b63da1105c30acb9fca30cbd9598fc14a.png";
+import gallery1 from "@/assets/878d9e7c87b86a926d7535ebda0064838d447918.png";
+import gallery2 from "@/assets/e35d3a50ef62292d8d8180835bdbddd9b4898499.png";
+import gallery3 from "@/assets/9072dc94fa7d6947e3557ded0ed34b0c1eb1e16d.png";
+import gallery4 from "@/assets/ae0fb724333e81b37dee4b39c3d630f221d1aef7.png";
+import gallery5 from "@/assets/b671d3319d41c67b234f3ac76f721dc03d03e90b.png";
+import gallery6 from "@/assets/43635cdb5c77aba6eeca73e8557d0b29fdce1f12.png";
+import gallery7 from "@/assets/5c29cf1b63da1105c30acb9fca30cbd9598fc14a.png";
 
 const project = {
   title: "Bee-Creations",

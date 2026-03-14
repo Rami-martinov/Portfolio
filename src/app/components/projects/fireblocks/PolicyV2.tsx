@@ -1,11 +1,11 @@
 import { ProjectPage } from "../../ProjectPage";
-import challengeImg1 from "figma:asset/edaae97f48e549aada382aa1b75ef17b3c45cc07.png";
-import challengeImg2 from "figma:asset/68b8174722ba379f8fbf7e6188915cd5a4ea122f.png";
-import solutionImg1 from "figma:asset/3c6ea6a97f28d223cd6341661d6c00a5deda647f.png";
-import solutionImg2 from "figma:asset/8636cc71f4ff50110c1884214089191f6d7929be.png";
-import solutionImg3 from "figma:asset/9a7e647fb76056aed25cae5af6701affa5258a82.png";
-import solutionImg4 from "figma:asset/7cba306c139af036a7eae4c9947aea24662cf358.png";
-import impactImg from "figma:asset/fcd41ffc30a8901360b014ff6ad32b89dae2f58e.png";
+import challengeImg1 from "@/assets/edaae97f48e549aada382aa1b75ef17b3c45cc07.png";
+import challengeImg2 from "@/assets/68b8174722ba379f8fbf7e6188915cd5a4ea122f.png";
+import solutionImg1 from "@/assets/3c6ea6a97f28d223cd6341661d6c00a5deda647f.png";
+import solutionImg2 from "@/assets/8636cc71f4ff50110c1884214089191f6d7929be.png";
+import solutionImg3 from "@/assets/9a7e647fb76056aed25cae5af6701affa5258a82.png";
+import solutionImg4 from "@/assets/7cba306c139af036a7eae4c9947aea24662cf358.png";
+import impactImg from "@/assets/fcd41ffc30a8901360b014ff6ad32b89dae2f58e.png";
 
 const project = {
   title: "Policy V2 & Rule Builder",

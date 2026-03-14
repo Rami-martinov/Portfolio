@@ -1,12 +1,12 @@
 import { ProjectPage } from "../../ProjectPage";
 
-import earnGif from "figma:asset/0e555cefd544fd6d91a42fc271256fdaacbc660c.png";
-import earnDashboard from "figma:asset/ccca7b92f6138de8da948247d9a5b258a728bbb0.png";
-import earnHoverDialogs from "figma:asset/a5446cb1b99ed404a3f732eb7ffb2ad8884557e6.png";
-import earnYieldOption from "figma:asset/7c5cb49e69a55c9235fd0f7a3e1032498142d340.png";
-import earnOpportunity from "figma:asset/355b460b897452676202efa90124887c33698715.png";
-import earnDeposit from "figma:asset/ca358db76cbb8d93d575815c4cc519cd64abec64.png";
-import earnMobileApproval from "figma:asset/f5e88b5a6acdb0e8cfa6a6dfe1689a626649050b.png";
+import earnGif from "@/assets/0e555cefd544fd6d91a42fc271256fdaacbc660c.png";
+import earnDashboard from "@/assets/ccca7b92f6138de8da948247d9a5b258a728bbb0.png";
+import earnHoverDialogs from "@/assets/a5446cb1b99ed404a3f732eb7ffb2ad8884557e6.png";
+import earnYieldOption from "@/assets/7c5cb49e69a55c9235fd0f7a3e1032498142d340.png";
+import earnOpportunity from "@/assets/355b460b897452676202efa90124887c33698715.png";
+import earnDeposit from "@/assets/ca358db76cbb8d93d575815c4cc519cd64abec64.png";
+import earnMobileApproval from "@/assets/f5e88b5a6acdb0e8cfa6a6dfe1689a626649050b.png";
 
 const project = {
   title: "Lending & Earn",
