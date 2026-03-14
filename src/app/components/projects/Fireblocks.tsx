@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router";
 import { ChevronLeft } from "lucide-react";
 import { Highlight } from "../ui/hero-highlight";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FadeIn } from "../ui/motion-css";
 
 const ACCENT = "#4f46e5";
@@ -31,6 +31,30 @@ function HighlightedLink({ to, children }: { to: string; children: React.ReactNo
 export function Fireblocks() {
   const navigate = useNavigate();
 
+  const [passwordInput, setPasswordInput] = useState("");
+  const [error, setError] = useState("");
+  const [unlocked, setUnlocked] = useState(false);
+
+  useEffect(() => {
+    const stored = window.localStorage.getItem("fireblocks_access");
+    if (stored === "granted") {
+      setUnlocked(true);
+    }
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simple password check – change the string below to whatever you want
+    const correctPassword = "fireblocks2024";
+    if (passwordInput === correctPassword) {
+      window.localStorage.setItem("fireblocks_access", "granted");
+      setUnlocked(true);
+      setError("");
+    } else {
+      setError("Incorrect password. Please try again.");
+    }
+  };
+
   return (
     <div className="min-h-[calc(100vh-3.5rem)] flex items-center justify-center px-6 md:px-12">
       <div className="max-w-3xl mx-auto py-20 md:py-28">
@@ -46,6 +70,58 @@ export function Fireblocks() {
           </button>
         </FadeIn>
 
+        {/* If locked, show password gate */}
+        {!unlocked ? (
+          <div className="mt-6">
+            <FadeIn delay={0.1} duration={0.7} y={16}>
+              <h1
+                className="text-[2em] text-neutral-900 tracking-[-0.025em] mb-3"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  lineHeight: 1.2,
+                  fontWeight: 700,
+                }}
+              >
+                Protected case studies
+              </h1>
+              <p
+                className="text-[0.95rem] text-neutral-600 mb-6"
+                style={{ lineHeight: 1.6 }}
+              >
+                To view my Fireblocks work, please enter the password I shared
+                with you.
+              </p>
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-4 max-w-sm"
+                autoComplete="off"
+              >
+                <label className="block text-xs font-medium text-neutral-500 tracking-[0.12em] uppercase">
+                  Password
+                  <input
+                    type="password"
+                    value={passwordInput}
+                    onChange={(e) => setPasswordInput(e.target.value)}
+                    className="mt-2 w-full rounded-md border border-neutral-200 px-3 py-2 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/80 focus:border-neutral-900/80 transition"
+                    placeholder="Enter password"
+                  />
+                </label>
+                {error && (
+                  <p className="text-xs text-red-500" role="alert">
+                    {error}
+                  </p>
+                )}
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center rounded-full bg-neutral-900 px-4 py-2 text-xs font-medium tracking-[0.18em] uppercase text-white hover:bg-neutral-800 transition-colors"
+                >
+                  Unlock
+                </button>
+              </form>
+            </FadeIn>
+          </div>
+        ) : (
+          <>
         {/* H1 Headline */}
         <FadeIn
           delay={0.1}
@@ -260,6 +336,8 @@ export function Fireblocks() {
 
         {/* Footer spacer */}
         <div className="h-20" />
+          </>
+        )}
       </div>
     </div>
   );
