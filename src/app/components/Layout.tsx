@@ -11,6 +11,9 @@ export function Layout() {
 
   // Re-trigger page transition on route change
   useEffect(() => {
+    // Always start new pages scrolled to the top
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+
     setPageVisible(false);
     const t = requestAnimationFrame(() => {
       requestAnimationFrame(() => setPageVisible(true));
