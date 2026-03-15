@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 import dappProtectionImg from "@/assets/66b096bd8ee543c7e700795533fe309a66983c23.png";
 import txSimulationImg from "@/assets/cf6125bf272681fed9a4f22b3347b1309d3a41e0.png";
 import tamImg1 from "@/assets/b6f054401ec3f0245a28f6934047fa220664bce9.png";
@@ -66,5 +68,13 @@ const project = {
 };
 
 export function TransactionSecurity() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (window.localStorage.getItem("fireblocks_access") !== "granted") {
+      navigate("/work/fireblocks");
+    }
+  }, [navigate]);
+
   return <ProjectPage project={project} />;
 }

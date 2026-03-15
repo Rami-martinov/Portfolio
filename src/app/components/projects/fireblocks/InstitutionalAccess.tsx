@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 import { ProjectPage } from "../../ProjectPage";
 
 // Grey placeholder images (will be replaced with real figma:asset imports)
@@ -49,5 +51,13 @@ const project = {
 };
 
 export function InstitutionalAccess() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (window.localStorage.getItem("fireblocks_access") !== "granted") {
+      navigate("/work/fireblocks");
+    }
+  }, [navigate]);
+
   return <ProjectPage project={project} />;
 }
