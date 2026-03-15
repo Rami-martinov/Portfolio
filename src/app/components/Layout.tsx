@@ -66,6 +66,16 @@ export function Layout() {
           </button>
         </div>
 
+        {/* Subtle backdrop overlay */}
+        {menuOpen && (
+          <button
+            type="button"
+            aria-hidden="true"
+            onClick={() => setMenuOpen(false)}
+            className="fixed inset-0 z-[-1] bg-black/10 backdrop-blur-[1px] transition-opacity"
+          />
+        )}
+
         {/* Menu panel */}
         {menuOpen && (
           <div className="border-t border-neutral-100 bg-white/95 backdrop-blur-md">
