@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { ProjectPage } from "../../ProjectPage";
 import challengeImg1 from "@/assets/edaae97f48e549aada382aa1b75ef17b3c45cc07.png";
 import challengeImg2 from "@/assets/68b8174722ba379f8fbf7e6188915cd5a4ea122f.png";
@@ -44,12 +44,13 @@ const project = {
 
 export function PolicyV2() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (window.localStorage.getItem("fireblocks_access") !== "granted") {
-      navigate("/work/fireblocks");
+      navigate("/work/fireblocks", { state: { from: location.pathname } });
     }
-  }, [navigate]);
+  }, [location.pathname, navigate]);
 
   return <ProjectPage project={project} />;
 }

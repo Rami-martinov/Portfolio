@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { ChevronLeft } from "lucide-react";
 import { Highlight } from "../ui/hero-highlight";
 import { useEffect, useState } from "react";
@@ -30,6 +30,7 @@ function HighlightedLink({ to, children }: { to: string; children: React.ReactNo
 
 export function Fireblocks() {
   const navigate = useNavigate();
+  const location = useLocation() as { state?: { from?: string } } | any;
 
   const [passwordInput, setPasswordInput] = useState("");
   const [error, setError] = useState("");
@@ -39,8 +40,12 @@ export function Fireblocks() {
     const stored = window.localStorage.getItem("fireblocks_access");
     if (stored === "granted") {
       setUnlocked(true);
+      const from = location.state?.from;
+      if (from && from !== "/work/fireblocks") {
+        navigate(from, { replace: true });
+      }
     }
-  }, []);
+  }, [location.state, navigate]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,6 +55,10 @@ export function Fireblocks() {
       window.localStorage.setItem("fireblocks_access", "granted");
       setUnlocked(true);
       setError("");
+      const from = location.state?.from;
+      if (from && from !== "/work/fireblocks") {
+        navigate(from, { replace: true });
+      }
     } else {
       setError("Incorrect password. Please try again.");
     }

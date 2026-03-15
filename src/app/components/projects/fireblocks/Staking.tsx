@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { useLightbox } from "../../Lightbox";
 import { ImageCarousel } from "../../ImageCarousel";
 import { FadeIn, useInView } from "../../ui/motion-css";
@@ -64,12 +64,13 @@ function ScrollSection({ children }: { children: React.ReactNode }) {
 
 export function Staking() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (window.localStorage.getItem("fireblocks_access") !== "granted") {
-      navigate("/work/fireblocks");
+      navigate("/work/fireblocks", { state: { from: location.pathname } });
     }
-  }, [navigate]);
+  }, [location.pathname, navigate]);
 
   return (
     <div className="min-h-screen">

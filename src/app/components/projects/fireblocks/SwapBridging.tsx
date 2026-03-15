@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { ImageCarousel } from "../../ImageCarousel";
 import { FadeIn, useInView } from "../../ui/motion-css";
 
@@ -67,12 +67,13 @@ function ScrollHr() {
 
 export function SwapBridging() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (window.localStorage.getItem("fireblocks_access") !== "granted") {
-      navigate("/work/fireblocks");
+      navigate("/work/fireblocks", { state: { from: location.pathname } });
     }
-  }, [navigate]);
+  }, [location.pathname, navigate]);
 
   return (
     <div className="min-h-screen">

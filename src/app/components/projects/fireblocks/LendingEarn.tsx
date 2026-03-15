@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { ProjectPage } from "../../ProjectPage";
 
 import earnGif from "@/assets/0e555cefd544fd6d91a42fc271256fdaacbc660c.png";
@@ -50,12 +50,13 @@ const project = {
 
 export function LendingEarn() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (window.localStorage.getItem("fireblocks_access") !== "granted") {
-      navigate("/work/fireblocks");
+      navigate("/work/fireblocks", { state: { from: location.pathname } });
     }
-  }, [navigate]);
+  }, [location.pathname, navigate]);
 
   return <ProjectPage project={project} />;
 }
