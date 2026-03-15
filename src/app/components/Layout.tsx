@@ -30,8 +30,18 @@ export function Layout() {
   return (
     <LightboxProvider>
     <div className="min-h-screen bg-white text-neutral-900" style={{ fontFamily: "'Inter', sans-serif" }}>
+      {/* Backdrop behind header/menu, above page content */}
+      {menuOpen && (
+        <button
+          type="button"
+          aria-label="Close navigation"
+          onClick={() => setMenuOpen(false)}
+          className="fixed inset-0 z-40 bg-black/10 backdrop-blur-[1px]"
+        />
+      )}
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-100">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-14">
           <div className="flex items-center gap-4">
             {!isHome && (
@@ -65,16 +75,6 @@ export function Layout() {
             {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
-
-        {/* Subtle backdrop overlay */}
-        {menuOpen && (
-          <button
-            type="button"
-            aria-hidden="true"
-            onClick={() => setMenuOpen(false)}
-            className="fixed inset-0 z-[-1] bg-black/10 backdrop-blur-[1px] transition-opacity"
-          />
-        )}
 
         {/* Menu panel */}
         {menuOpen && (
