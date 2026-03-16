@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router";
+import { ProjectNav } from "../../ProjectNav";
 import { ImageCarousel } from "../../ImageCarousel";
 import { FadeIn, useInView } from "../../ui/motion-css";
 
@@ -440,6 +441,9 @@ export function SwapBridging() {
             </div>
           </FadeIn>
         </div>
+
+        {/* Project navigation */}
+        <ProjectNav />
       </div>
     </div>
   );

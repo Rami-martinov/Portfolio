@@ -3,6 +3,7 @@ import { ChevronLeft } from "lucide-react";
 import { Highlight } from "../ui/hero-highlight";
 import { useEffect, useState } from "react";
 import { FadeIn } from "../ui/motion-css";
+import { ProjectNav } from "../ProjectNav";
 
 const ACCENT = "#4f46e5";
 const ACCENT_HOVER = "#6366f1";
@@ -343,8 +344,10 @@ export function Fireblocks() {
           </div>
         </FadeIn>
 
-        {/* Footer spacer */}
-        <div className="h-20" />
+        {/* Project navigation */}
+        <div className="mt-16">
+          <ProjectNav />
+        </div>
           </>
         )}
       </div>

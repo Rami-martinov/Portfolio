@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router";
+import { ProjectNav } from "../../ProjectNav";
 import { useLightbox } from "../../Lightbox";
 import { ImageCarousel } from "../../ImageCarousel";
 import { FadeIn, useInView } from "../../ui/motion-css";
@@ -203,6 +204,9 @@ export function Staking() {
             </div>
           </FadeIn>
         </div>
+
+        {/* Project navigation */}
+        <ProjectNav />
       </div>
     </div>
   );

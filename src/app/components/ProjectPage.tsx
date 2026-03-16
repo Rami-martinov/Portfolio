@@ -3,6 +3,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ImageCarousel } from "./ImageCarousel";
 import { useLightbox } from "./Lightbox";
 import { FadeIn, useInView } from "./ui/motion-css";
+import { ProjectNav } from "./ProjectNav";
 
 interface ProjectData {
   title: string;
@@ -171,6 +172,9 @@ export function ProjectPage({
             </div>
           </FadeIn>
         </div>
+
+        {/* Project navigation */}
+        <ProjectNav />
       </div>
     </div>
   );
