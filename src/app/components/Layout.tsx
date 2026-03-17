@@ -127,12 +127,6 @@ export function Layout() {
                   Chegg Prep
                 </button>
                 <button
-                  onClick={() => closeMenuAndNavigate("/work/become")}
-                  className="block text-left text-neutral-800 hover:text-neutral-950"
-                >
-                  Become
-                </button>
-                <button
                   onClick={() => closeMenuAndNavigate("/work/bee-creations")}
                   className="block text-left text-neutral-800 hover:text-neutral-950"
                 >
@@ -242,12 +236,6 @@ export function Layout() {
               className="block text-neutral-700 hover:text-neutral-950"
             >
               Chegg Prep
-            </Link>
-            <Link
-              to="/work/become"
-              className="block text-neutral-700 hover:text-neutral-950"
-            >
-              Become
             </Link>
             <Link
               to="/work/bee-creations"

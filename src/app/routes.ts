@@ -3,7 +3,6 @@ import { Layout } from "./components/Layout";
 import { Home } from "./components/Home";
 import { Fireblocks } from "./components/projects/Fireblocks";
 import { CheggPrep } from "./components/projects/CheggPrep";
-import { Become } from "./components/projects/Become";
 import { BeeCreations } from "./components/projects/BeeCreations";
 import { Photography } from "./components/Photography";
 import { Illustration } from "./components/Illustration";
@@ -30,7 +29,6 @@ export const router = createBrowserRouter([
       { path: "work/fireblocks/swap-bridging", Component: SwapBridging },
       { path: "work/fireblocks/lending-earn", Component: LendingEarn },
       { path: "work/chegg-prep", Component: CheggPrep },
-      { path: "work/become", Component: Become },
       { path: "work/bee-creations", Component: BeeCreations },
       { path: "photography", Component: Photography },
       { path: "illustration", Component: Illustration },

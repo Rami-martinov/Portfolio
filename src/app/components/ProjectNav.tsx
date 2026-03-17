@@ -9,7 +9,6 @@ const PROJECTS = [
   { path: "/work/fireblocks/swap-bridging", label: "Swap & Bridging" },
   { path: "/work/fireblocks/staking", label: "Staking" },
   { path: "/work/chegg-prep", label: "Chegg Prep" },
-  { path: "/work/become", label: "Become" },
   { path: "/work/bee-creations", label: "Bee-Creations" },
 ];
 
