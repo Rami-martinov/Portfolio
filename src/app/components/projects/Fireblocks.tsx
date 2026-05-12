@@ -4,6 +4,8 @@ import { Highlight } from "../ui/hero-highlight";
 import { useEffect, useState } from "react";
 import { FadeIn } from "../ui/motion-css";
 import { ProjectNav } from "../ProjectNav";
+import policyMarketingImg from "@/assets/Policy-Marketing.png";
+import onChainMarketingImg from "@/assets/OnChain-Marketing.png";
 
 const ACCENT = "#4f46e5";
 const ACCENT_HOVER = "#6366f1";
@@ -169,6 +171,15 @@ export function Fireblocks() {
           }}
         ><span>As a Senior Product Designer at Fireblocks, I focused on translating complex blockchain logic into intuitive, institutional-grade experiences. My work spanned across multiple units, where I prioritized consistency, clarity, and a progressive disclosure approach to simplify high-stakes actions.</span><br /><br /><span>Beyond individual features, I acted as a cross-functional contributor to the Fireblocks Design System, crafting reusable components and patterns that scaled across the entire platform. I also took ownership of the UX writing for my projects - shaping the language of tooltips, dialogs, and feature naming to ensure confidence for users ranging from crypto-natives to B2B institutional clients.</span></FadeIn>
 
+        {/* Policy Marketing image */}
+        <FadeIn delay={0.25} duration={0.7} y={24} className="mt-16">
+          <img
+            src={policyMarketingImg}
+            alt="Policy marketing"
+            className="w-full rounded-lg"
+          />
+        </FadeIn>
+
         {/* Section: Security & Trust */}
         <FadeIn delay={0.3} duration={0.7} y={24} className="mt-16">
           <h2
@@ -231,6 +242,15 @@ export function Fireblocks() {
         {/* Divider */}
         <FadeIn delay={0.35} duration={0.7} y={0}>
           <hr className="my-16 border-neutral-200" />
+        </FadeIn>
+
+        {/* OnChain Marketing image */}
+        <FadeIn delay={0.25} duration={0.7} y={24} className="mt-16">
+          <img
+            src={onChainMarketingImg}
+            alt="OnChain marketing"
+            className="w-full rounded-lg"
+          />
         </FadeIn>
 
         {/* Section: OnChain & DeFi Ecosystem */}
