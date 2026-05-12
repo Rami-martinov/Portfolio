@@ -82,36 +82,6 @@ export function Layout() {
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 grid gap-4 md:grid-cols-3 text-sm">
               <div className="space-y-2">
                 <div className="text-[11px] tracking-[0.2em] uppercase text-neutral-400">
-                  Main
-                </div>
-                <button
-                  onClick={() => closeMenuAndNavigate("/")}
-                  className="block text-left text-neutral-800 hover:text-neutral-950"
-                >
-                  Overview
-                </button>
-                <button
-                  onClick={() => closeMenuAndNavigate("/photography")}
-                  className="block text-left text-neutral-800 hover:text-neutral-950"
-                >
-                  Photography
-                </button>
-                <button
-                  onClick={() => closeMenuAndNavigate("/illustration")}
-                  className="block text-left text-neutral-800 hover:text-neutral-950"
-                >
-                  Illustration
-                </button>
-                <button
-                  onClick={() => closeMenuAndNavigate("/ellie")}
-                  className="block text-left text-neutral-800 hover:text-neutral-950"
-                >
-                  Ellie
-                </button>
-              </div>
-
-              <div className="space-y-2">
-                <div className="text-[11px] tracking-[0.2em] uppercase text-neutral-400">
                   Selected Work
                 </div>
                 <button
@@ -175,6 +145,36 @@ export function Layout() {
                   Staking
                 </button>
               </div>
+
+              <div className="space-y-2">
+                <div className="text-[11px] tracking-[0.2em] uppercase text-neutral-400">
+                  Main
+                </div>
+                <button
+                  onClick={() => closeMenuAndNavigate("/")}
+                  className="block text-left text-neutral-800 hover:text-neutral-950"
+                >
+                  Overview
+                </button>
+                <button
+                  onClick={() => closeMenuAndNavigate("/photography")}
+                  className="block text-left text-neutral-800 hover:text-neutral-950"
+                >
+                  Photography
+                </button>
+                <button
+                  onClick={() => closeMenuAndNavigate("/illustration")}
+                  className="block text-left text-neutral-800 hover:text-neutral-950"
+                >
+                  Illustration
+                </button>
+                <button
+                  onClick={() => closeMenuAndNavigate("/ellie")}
+                  className="block text-left text-neutral-800 hover:text-neutral-950"
+                >
+                  Ellie
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -197,30 +197,6 @@ export function Layout() {
       {/* Footer */}
       <footer className="mt-16 border-t border-neutral-100 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 grid gap-8 md:grid-cols-4 text-sm">
-          <div className="space-y-3">
-            <div className="text-[11px] tracking-[0.2em] uppercase text-neutral-400">
-              Main
-            </div>
-            <Link to="/" className="block text-neutral-700 hover:text-neutral-950">
-              Overview
-            </Link>
-            <Link
-              to="/photography"
-              className="block text-neutral-700 hover:text-neutral-950"
-            >
-              Photography
-            </Link>
-            <Link
-              to="/illustration"
-              className="block text-neutral-700 hover:text-neutral-950"
-            >
-              Illustration
-            </Link>
-            <Link to="/ellie" className="block text-neutral-700 hover:text-neutral-950">
-              Ellie
-            </Link>
-          </div>
-
           <div className="space-y-3">
             <div className="text-[11px] tracking-[0.2em] uppercase text-neutral-400">
               Selected Work
@@ -284,6 +260,30 @@ export function Layout() {
               className="block text-neutral-700 hover:text-neutral-950"
             >
               Staking
+            </Link>
+          </div>
+
+          <div className="space-y-3">
+            <div className="text-[11px] tracking-[0.2em] uppercase text-neutral-400">
+              Main
+            </div>
+            <Link to="/" className="block text-neutral-700 hover:text-neutral-950">
+              Overview
+            </Link>
+            <Link
+              to="/photography"
+              className="block text-neutral-700 hover:text-neutral-950"
+            >
+              Photography
+            </Link>
+            <Link
+              to="/illustration"
+              className="block text-neutral-700 hover:text-neutral-950"
+            >
+              Illustration
+            </Link>
+            <Link to="/ellie" className="block text-neutral-700 hover:text-neutral-950">
+              Ellie
             </Link>
           </div>
 

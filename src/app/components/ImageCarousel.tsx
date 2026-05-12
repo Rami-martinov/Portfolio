@@ -16,7 +16,7 @@ export function ImageCarousel({ images = [] }: ImageCarouselProps) {
   const next = () => setCurrent((c) => (c === count - 1 ? 0 : c + 1));
 
   return (
-    <div className="relative mb-8 group">
+    <div className="relative mb-8">
       {/* Slides */}
       <div
         className="rounded-lg overflow-hidden bg-neutral-100"
@@ -58,14 +58,14 @@ export function ImageCarousel({ images = [] }: ImageCarouselProps) {
       {/* Arrows */}
       <button
         onClick={prev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer shadow-sm"
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur flex items-center justify-center cursor-pointer shadow-sm"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-4 h-4 text-neutral-700" />
       </button>
       <button
         onClick={next}
-        className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer shadow-sm"
+        className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur flex items-center justify-center cursor-pointer shadow-sm"
         aria-label="Next slide"
       >
         <ChevronRight className="w-4 h-4 text-neutral-700" />
