@@ -31,6 +31,7 @@ const project = {
   sections: [
     {
       heading: "dApp Protection",
+      title: "Securing Enterprise Assets through Real-Time Threat Intelligence",
       images: [
         dappProtectionImg,
         dappImg2,
@@ -43,6 +44,7 @@ const project = {
     },
     {
       heading: "Transaction Simulation",
+      title: "Translating Complex Smart Contracts into Human-Readable Assets",
       images: [
         txSimulationImg,
         txSimImg1,
@@ -56,6 +58,7 @@ const project = {
     },
     {
       heading: "Token Allowance Manager",
+      title: "Minimizing Attack Surfaces through Proactive Permission Auditing",
       images: [
         tamImg1,
         tamImg2,

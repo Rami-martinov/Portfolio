@@ -16,6 +16,7 @@ interface ProjectData {
   heroImage?: string;
   sections: {
     heading: string;
+    title?: string;
     text: string;
     image?: string;
     images?: string[];
@@ -60,6 +61,14 @@ function ScrollSection({
         {String(index + 1).padStart(2, "0")} /{" "}
         {section.heading}
       </h2>
+      {section.title && (
+        <h3
+          className="text-[clamp(1.25rem,3vw,1.75rem)] text-neutral-900 tracking-tight mb-6"
+          style={{ fontFamily: "'Inter', sans-serif", lineHeight: 1.3 }}
+        >
+          {section.title}
+        </h3>
+      )}
       {section.text.includes("• ") ? (
         <ul
           className="text-neutral-600 mb-8 space-y-3"

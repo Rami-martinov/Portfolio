@@ -34,16 +34,19 @@ const project = {
   sections: [
     {
       heading: "Approval Groups",
+      title: "Mirroring Complex Corporate Governance in Digital Assets",
       images: [approvalGroupsHero, approvalGroupsUI],
       text: "The Challenge: Rigid, \"one-size-fits-all\" security forced customers to grant Admin privileges to anyone involved in a signature, creating major security risks and operational bottlenecks. Organizations couldn't scale because they couldn't mirror their internal segregation of duties.\n\nThe Approach: I moved the platform from hard-coded roles to a flexible, group-based permission model. My goal was to empower admins to configure custom approval flows for high-risk actions - like whitelisting addresses or adding users - without compromising the principle of least privilege.\n\nThe Solution: A centralized governance tab where users map specific platform actions to custom user groups and thresholds. I designed a configuration engine that allows for \"M-of-N\" logic (e.g., 3 of 5 Finance Officers) while maintaining the Admin Quorum as a secure default for frictionless onboarding.\n\nThe Impact: Enabled banks and enterprise clients to enforce complex corporate policies, reducing reliance on a single \"Admin Quorum\" and eliminating the need for over-privileged user accounts.",
     },
     {
       heading: "Multi-Factor Authentication (MFA)",
+      title: "Streamlining Institutional Access with Native, One-Tap Authentication",
       images: [mfaHero, mfaLogin, mfaCheckEmail, mfaEmailVerify, mfaMobileFlow, mfaVerifyApp],
       text: "The Challenge: Traditional TOTP (Google Authenticator) was slow and prone to hacks via cloud-backup vulnerabilities. Furthermore, relying on a third-party provider (Auth0) created a single point of failure that could lock users out during service outages.\n\nThe Approach: I leveraged the existing Fireblocks mobile ecosystem to design a native, proprietary MFA flow. The focus was on replacing cumbersome manual digit-entry with a seamless, \"one-tap\" push notification experience.\n\nThe Source of Truth: By moving MFA in-house via the Fireblocks App, we eliminated the dependency on external providers and improved the security posture against information-stealing malware and account takeovers.\n\nThe Impact: Significantly hardened account security while simultaneously accelerating the login process, providing a \"consumer-grade\" user experience for institutional-grade security.",
     },
     {
       heading: "Console Access IP Allowlist",
+      title: "Empowering Administrators with Self-Service Network Security",
       images: [ipHero, ipSettings, ipAllowlist, ipAddModal, ipWorkspace],
       text: "The Challenge: Account takeovers through stolen session keys were a critical risk. Previously, IP whitelisting was a manual, hidden process handled by support tickets, leaving the vast majority of customers unprotected and vulnerable to unauthorized access.\n\nThe Approach: I designed a self-service security perimeter that shifted control from Fireblocks Operations to the customer. I focused on making complex network configurations (CIDR blocks and subnets) accessible to administrators through an intuitive, modal-driven interface.\n\nThe Solution: A robust IP management dashboard with togglable controls. I implemented features for bulk-adding trusted networks and integrated the flow with Approval Groups to ensure that changes to the allowlist themselves required a secure signature.\n\nThe Impact: Transformed a manual bottleneck into a scalable security feature. It became a mandatory requirement for enterprise RFPs and provided an immediate defense-in-depth against credential leaks.",
     },
