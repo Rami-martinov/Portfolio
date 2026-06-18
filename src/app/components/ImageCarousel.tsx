@@ -16,10 +16,10 @@ export function ImageCarousel({ images = [] }: ImageCarouselProps) {
   const next = () => setCurrent((c) => (c === count - 1 ? 0 : c + 1));
 
   return (
-    <div className="relative mb-8">
+    <div className="relative">
       {/* Slides */}
       <div
-        className="rounded-lg overflow-hidden bg-neutral-100"
+        className="overflow-hidden"
       >
         {/* Only show the current slide so height adapts naturally */}
         {slides.map((item, i) => (
@@ -33,6 +33,7 @@ export function ImageCarousel({ images = [] }: ImageCarouselProps) {
                   src={item}
                   alt={`Slide ${i + 1}`}
                   className="w-full"
+                  style={{ display: "block", boxShadow: "0 8px 40px rgba(0,0,0,0.12)" }}
                 />
                 {/* Left click zone - navigate prev */}
                 <div

@@ -195,7 +195,7 @@ export function Layout() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-16 border-t border-neutral-100 bg-white">
+      <footer className={`${location.pathname === "/work/fireblocks/policy-v2" ? "" : "mt-16"} border-t border-neutral-100 bg-white`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 grid gap-8 md:grid-cols-4 text-sm">
           <div className="space-y-3">
             <div className="text-[11px] tracking-[0.2em] uppercase text-neutral-400">

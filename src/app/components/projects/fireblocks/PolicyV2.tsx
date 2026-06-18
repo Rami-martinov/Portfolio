@@ -1,45 +1,63 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { ProjectPage } from "../../ProjectPage";
-import challengeImg1 from "@/assets/edaae97f48e549aada382aa1b75ef17b3c45cc07.png";
-import challengeImg2 from "@/assets/68b8174722ba379f8fbf7e6188915cd5a4ea122f.png";
-import solutionImg1 from "@/assets/3c6ea6a97f28d223cd6341661d6c00a5deda647f.png";
-import solutionImg2 from "@/assets/8636cc71f4ff50110c1884214089191f6d7929be.png";
-import solutionImg3 from "@/assets/9a7e647fb76056aed25cae5af6701affa5258a82.png";
-import solutionImg4 from "@/assets/7cba306c139af036a7eae4c9947aea24662cf358.png";
-import impactImg from "@/assets/fcd41ffc30a8901360b014ff6ad32b89dae2f58e.png";
+import { ProjectPageV2 } from "../../ProjectPageV2";
+import type { ProjectDataV2 } from "../../ProjectPageV2";
+import challengeImg from "@/assets/Info Panel/challengeImg1.png";
+import overviewImg from "@/assets/overviewImg.png";
+import solutionImg from "@/assets/solutionImg1.png";
 
-const project = {
-  title: "Policy V2 & Rule Builder",
-  subtitle: "Rebuilding the core governance engine",
-  summary:
-    "Led the complete architectural redesign of Fireblocks' Policy engine, replacing an outdated form-based system with a contextual, lane-based rule builder that scales with institutional complexity.",
-  role: "Senior Product Designer",
-  timeline: "2022 – 2023",
-  team: "1 Designer, 4 Engineers, 1 PM, VP Security",
-  tags: ["Security", "Governance", "Enterprise", "Rule Engine", "B2B"],
-  sections: [
+const project: ProjectDataV2 = {
+  company: "Fireblocks",
+  category: "Security & Trust",
+  title: "Securing $1,000,000,000,000 yearly: Rebuilding Fireblocks' policy engine",
+  subtitle:
+    "Led the complete architectural redesign of Fireblocks' Policy engine. replacing an outdated form-based system with a contextual, lane-based rule builder that scales with institutional complexity.",
+  overviewImage: overviewImg,
+  statsIntro:
+    "I led the design transition by partnering with the VP of Security and Cyber Researchers to map a new taxonomy for transaction governance.",
+  stats: [
     {
-      heading: "Challenge",
-      images: [challengeImg1, challengeImg2],
-      tag: "Legacy V1 Version",
-      text: "The original policy system used a monolithic, flat form where all rules - regardless of transaction type - were stacked on top of one another in a single list. As Fireblocks scaled to hundreds of institutional clients with complex multi-sig requirements, this architecture became a critical bottleneck.\n\nUsers struggled to parse how overlapping rules interacted, making it nearly impossible to predict how a change would affect live transactions. This lack of transparency led to frequent misconfigurations, a surge in support tickets, and a staggering 70+ day average setup time that blocked clients from moving assets.",
+      category: "Onboarding Bottleneck",
+      result: "Dropped Time-to-active by an average of 56%.",
     },
     {
-      heading: "Approach",
-      text: "I led the design transition by partnering with the VP of Security and Cyber Researchers to map a new taxonomy for transaction governance. By auditing support tickets and interviewing CSMs, we identified that the primary friction was the \"logic debt\" created by the stacked list, which lacked the hierarchy needed for high-stakes decision-making.",
+      category: "Support Overhead",
+      result: "40% reduction in policy-related support tickets.",
     },
     {
-      heading: "Solution: The \"Lanes\" Architecture",
-      images: [solutionImg1, solutionImg2, solutionImg3, solutionImg4],
-      text: "We replaced the confusing \"stack\" with a Contextual Policy Builder centered around the concept of \"Lanes.\" Instead of a single, tangled list, each lane represents a dedicated policy stream for a specific action (e.g., Transfers, Contract Calls, or Minting).\n\nModular Organization: By separating rules into lanes, we eliminated the risk of unintended rule interference.\n\nParallel Configuration: Users can now draft and manage different policy types simultaneously without losing the \"big picture.\"\n\nPlain-Language Logic: A redesigned rule builder translates complex security parameters into human-readable sentences.\n\nConflict Preview: Users can now see exactly how a rule fits into the live policy before sending it for approval, replacing guesswork with certainty.",
-    },
-    {
-      heading: "Impact",
-      image: impactImg,
-      text: "40% reduction in policy-related support tickets.\n\nDrastic reduction in institutional onboarding time (targeting the 70-day bottleneck).\n\nIncreased Security Confidence: Improved clarity eliminated critical misconfiguration errors for enterprise vaults.",
+      category: "Product vs. Service",
+      result: "Adopted the PLG model into the revised policy system.",
     },
   ],
+  challengeText: [
+    "The legacy policy system relied on an outdated, long-form rule builder that forced all types of blockchain transactions into a single, monolithic list. As Fireblocks scaled to hundreds of institutional clients with complex multi-sig requirements, this flat architecture became a critical bottleneck.",
+    "Users couldn't accurately parse how overlapping rules interacted, making live transaction outcomes nearly impossible to predict.",
+  ],
+  challengeImage: challengeImg,
+  solutionText:
+    "Partnering with the VP of Security and Cyber Researchers, I mapped a new taxonomy for transaction governance. Auditing support tickets and interviewing CSMs and users revealed two root problems: an outdated, one-size-fits-all form and a stacked rule list with zero hierarchy.",
+  solutionImage: solutionImg,
+  pillarsIntro:
+    "Policy V2 introduces an updated experience built on three core pillars: Policy Lanes, Info Layer and Rule Preview",
+  pillars: [
+    {
+      name: "Policy Lanes",
+      description:
+        "Replaced the single tangled list with dedicated, modular streams for specific actions to eliminate rule interference.",
+    },
+    {
+      name: "Info Layer & Wizard",
+      description:
+        "Broke rule creation into a 3-part wizard, renamed complex parameters, and added an embedded info panel",
+    },
+    {
+      name: "Rule Preview",
+      description:
+        "Letting users see exactly how a rule behaves within the full policy context before sending it for approval.",
+    },
+  ],
+  closingText:
+    "Representing a true end-to-end design ownership, this project required deep cross-functional alignment. I partnered with the VP of Security Products, Cyber Researchers, Customer Success, and Engineering to solve fundamental workflow issues within Fireblocks' most critical product engine.",
 };
 
 export function PolicyV2() {
@@ -52,5 +70,5 @@ export function PolicyV2() {
     }
   }, [location.pathname, navigate]);
 
-  return <ProjectPage project={project} />;
+  return <ProjectPageV2 project={project} />;
 }
