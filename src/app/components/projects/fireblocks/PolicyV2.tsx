@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { ProjectPageV2 } from "../../ProjectPageV2";
-import type { ProjectDataV2 } from "../../ProjectPageV2";
+import { CaseStudyPage } from "../../CaseStudyPage";
+import type { CaseStudyData } from "../../CaseStudyPage";
 import challengeImg from "@/assets/Info Panel/challengeImg1.png";
 import overviewImg from "@/assets/overviewImg.png";
 import solutionImg from "@/assets/solutionImg1.png";
 
-const project: ProjectDataV2 = {
+const project: CaseStudyData = {
   company: "Fireblocks",
   category: "Security & Trust",
   title: "Securing $1,000,000,000,000 yearly: Rebuilding Fireblocks' policy engine",
@@ -70,5 +70,5 @@ export function PolicyV2() {
     }
   }, [location.pathname, navigate]);
 
-  return <ProjectPageV2 project={project} />;
+  return <CaseStudyPage project={project} />;
 }

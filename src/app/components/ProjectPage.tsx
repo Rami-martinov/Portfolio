@@ -51,7 +51,7 @@ function ScrollSection({
       )}
       {section.image && (
         <div className="rounded-lg overflow-hidden bg-neutral-100 mb-8 cursor-pointer" onClick={() => open([section.image!])}>
-          
+
         </div>
       )}
       {section.images && section.images.length > 0 && (
