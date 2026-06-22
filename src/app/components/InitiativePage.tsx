@@ -120,7 +120,7 @@ export function InitiativePage({ project }: { project: InitiativeData }) {
     <div style={{ minHeight: "100vh", background: "#fff" }}>
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <div style={{ background: "#1B72E8", overflow: "hidden" }}>
+      <div style={{ background: "#6D62FF", overflow: "hidden" }}>
         <div className="max-w-[1440px] mx-auto box-border px-4 sm:px-10 lg:px-[256px] pt-16 sm:pt-20 md:pt-24 pb-0">
           <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 16, color: "rgba(255,255,255,0.7)", fontFamily: "'Inter', sans-serif" }}>
             <img src={securityLogo} alt="Security" width={24} height={24} />
@@ -140,7 +140,7 @@ export function InitiativePage({ project }: { project: InitiativeData }) {
       </div>
 
       {/* ── Overview image ───────────────────────────────────────────── */}
-      <div style={{ background: "linear-gradient(to bottom, #1B72E8 50%, #fff 50%)" }}>
+      <div style={{ background: "linear-gradient(to bottom, #6D62FF 50%, #fff 50%)" }}>
         <div className="max-w-[1440px] mx-auto box-border px-4 sm:px-8 md:px-[72px]">
           <img src={project.overviewImage} alt="Product overview" style={{ width: "100%", display: "block", boxShadow: "0 8px 40px rgba(0,0,0,0.12)", borderRadius: 16, cursor: "zoom-in" }} onClick={() => open([project.overviewImage])} />
         </div>

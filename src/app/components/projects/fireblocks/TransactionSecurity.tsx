@@ -1,73 +1,78 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
-import dappProtectionImg from "@/assets/66b096bd8ee543c7e700795533fe309a66983c23.png";
-import txSimulationImg from "@/assets/cf6125bf272681fed9a4f22b3347b1309d3a41e0.png";
-import tamImg1 from "@/assets/b6f054401ec3f0245a28f6934047fa220664bce9.png";
-import tamImg2 from "@/assets/639e498144d6e55ba5cea2909130ac42e2e2a949.png";
-import tamImg3 from "@/assets/064046741a11a71b94be2cfa739e2f7602841e16.png";
-import tamImg4 from "@/assets/278c0f992ad804bc0d7b472aeb0dcedcd9ee7edf.png";
-import dappImg2 from "@/assets/6a062739d19c397dd4640f176e1877baefa88966.png";
-import dappImg3 from "@/assets/150a43efd30817241a5b20bec5256b68b12bb733.png";
-import dappImg4 from "@/assets/9051ac9bbdc00ef0095208bb3b2d26cfdb6fcde6.png";
-import dappImg5 from "@/assets/69784c86e2596cee95a641a60fd4b1327111c307.png";
-import dappImg6 from "@/assets/356533f39ab813e389d0c6584d94f5bbab29a4bf.png";
-import txSimImg1 from "@/assets/bde6c115a995a683c6be2183aa94b9c2f9346ed9.png";
-import txSimImg2 from "@/assets/92b9433ef3efa02df57129f1ca07bafdc9c969f8.png";
-import txSimImg3 from "@/assets/fff04dfbd4730c2a38210d4b7b0b518b9829ecfb.png";
-import txSimImg4 from "@/assets/24b597d074b685f57b0fa2e009223400859521a2.png";
-import txSimImg5 from "@/assets/ebd393ad802d2c4e22c0605ff433acc0dde5f47f.png";
-import txSimImg6 from "@/assets/48f8b2b4725946dcee71ade643cf5f0c78d7254a.png";
-import { ProjectPage } from "../../ProjectPage";
+import { InitiativePage } from "../../InitiativePage";
+import type { InitiativeData } from "../../InitiativePage";
 
-const project = {
-  title: "Transaction Security",
-  subtitle: "Defending users against on-chain threats",
-  summary:
+import dappProtectionImg from "@/assets/dappProtectionHero.png";
+import dappImg2 from "@/assets/dappProtectionUI.png";
+import txSimulationImg from "@/assets/txSimulationHero.png";
+import tamImg1 from "@/assets/tamHero.png";
+
+const project: InitiativeData = {
+  company: "Fireblocks",
+  category: "Security & Trust",
+  title: "Transaction Security:\nDefending users against on-chain threats",
+  subtitle:
     "Designed threat alerts and the Token Allowance Manager, helping users identify and revoke malicious dApp permissions before assets could be compromised.",
-  role: "Senior Product Designer",
-  timeline: "2022 – 2023",
-  team: "1 Designer, 3 Engineers, Cyber Research Team",
-  tags: ["Security", "Threat Detection", "DeFi", "Web3", "Alerts"],
-  sections: [
+  overviewImage: dappProtectionImg,
+  statsIntro:
+    "Enterprise clients needed protection at every stage of a transaction: before they connected to a risky dApp, while they were signing a contract they couldn't fully read, and after permissions had already been granted and forgotten. I led three connected security surfaces that closed all three gaps: real-time dApp risk scoring, pre-execution transaction simulation, and proactive permission auditing.",
+  stats: [
     {
-      heading: "dApp Protection",
-      title: "Securing Enterprise Assets through Real-Time Threat Intelligence",
-      images: [
-        dappProtectionImg,
-        dappImg2,
-        dappImg3,
-        dappImg4,
-        dappImg5,
-        dappImg6,
-      ],
-      text: "The Challenge: Users were unknowingly connecting to malicious or \"copycat\" dApps, leading to immediate asset drainage through phishing.\n\nThe Approach: Working with the Cyber Research team, I designed a real-time risk-scoring UI. We focused on \"Just-in-Time\" security - triggering alerts at the exact moment of connection to prevent the threat before it starts.\n\nThe Solution: An automated firewall that categorizes dApps by contract age and audit status. I implemented a \"traffic-light\" system (Red/Yellow/Green) to provide clear, binary guidance to security officers without slowing down their workflow.\n\nThe Impact: Achieved a 94% adoption rate among enterprise clients, significantly reducing successful phishing attempts across the platform.",
+      category: "dApp Protection",
+      result:
+        "Real-time risk scoring flags malicious dApps with a Red/Yellow/Green system at the moment of connection.",
     },
     {
-      heading: "Transaction Simulation",
-      title: "Translating Complex Smart Contracts into Human-Readable Assets",
-      images: [
-        txSimulationImg,
-        txSimImg1,
-        txSimImg2,
-        txSimImg3,
-        txSimImg4,
-        txSimImg5,
-        txSimImg6,
-      ],
-      text: "The Challenge: Institutional traders were \"blind signing\" complex smart contract interactions, often unaware of the actual asset movement hidden behind the code.\n\nThe Approach: I mapped out the logic for a \"Pre-Execution\" state. The goal was to translate raw hex data into a human-readable visual summary of \"In\" vs. \"Out\" assets.\n\nThe Solution: A simulation engine that previews the transaction's net result. I designed a clear visual balance sheet that appears during the signing flow, exposing malicious logic (like hidden fees or unauthorized transfers) before the user commits to the blockchain.\n\nThe Impact: This became a cornerstone of the security narrative, providing a \"safety net\" that prevents accidental loss of funds due to complex contract errors.",
+      category: "Transaction Simulation",
+      result:
+        "A pre-execution engine translates raw contract data into a clear \"In vs. Out\" balance sheet before signing.",
     },
     {
-      heading: "Token Allowance Manager",
-      title: "Minimizing Attack Surfaces through Proactive Permission Auditing",
-      images: [
-        tamImg1,
-        tamImg2,
-        tamImg3,
-        tamImg4,
-      ],
-      text: "The Challenge: Over time, clients accumulated hundreds of open permissions (allowances) to various dApps. These \"dormant\" permissions remained a massive, invisible attack vector.\n\nThe Approach: I led the design of a centralized audit hub. We prioritized \"one-click\" actions to reduce the friction of security maintenance, making it as easy to revoke a permission as it is to grant one.\n\nThe Solution: A comprehensive dashboard for monitoring and revoking smart contract permissions. I designed a filtering system based on risk level and \"last used\" date, allowing users to prune their exposure systematically.\n\nThe Impact: Zero successful exploit incidents among users who actively utilized the manager to audit their permissions.",
+      category: "Token Allowance Manager",
+      result:
+        "A centralized dashboard for auditing and revoking dormant smart contract permissions in one click.",
     },
   ],
+  challengeLabel: "dApp Protection",
+  challengeText: [
+    "Built with the Cyber Research team, an automated firewall scores dApps in real time by contract age and audit status, using a clear Red/Yellow/Green traffic-light system that flags risk at the exact moment of connection, before any damage can occur.",
+  ],
+  challengeImage: dappImg2,
+  solutionLabel: "Transaction Simulation",
+  solutionText:
+    "A pre-execution simulation engine translates raw hex data into a human-readable \"In vs. Out\" balance sheet, surfacing hidden fees or unauthorized transfers during the signing flow itself, before the user commits to the blockchain.",
+  solutionImage: txSimulationImg,
+  extraSections: [
+    {
+      label: "Token Allowance Manager",
+      text: "A centralized audit dashboard lets users monitor and revoke smart contract permissions, filtering by risk level and last-used date, turning permission cleanup from a forgotten liability into a one-click maintenance habit.",
+      image: tamImg1,
+    },
+  ],
+  pillarsLabel: "The Approach",
+  pillarsIntro:
+    "Rather than solving these as separate problems, I treated them as one continuous security narrative — before connection, during signing, and after the fact, so a client's protection didn't have gaps between stages. Each surface was designed to apply \"just-in-time\" or \"one-click\" principles: catch risk early, make it visible at the moment it matters, and make remediation as frictionless as the original action.",
+  pillars: [
+    {
+      name: "Full Lifecycle Coverage",
+      description:
+        "Covered pre-connection, pre-execution, and post-grant as one connected security narrative.",
+    },
+    {
+      name: "Consistent Design Principle",
+      description:
+        "Applied just-in-time alerts and one-click remediation across all three surfaces without slowing workflow.",
+    },
+    {
+      name: "Glanceable Risk Signals",
+      description:
+        "Translated deep technical risk into binary, glanceable signals non-technical users could act on instantly.",
+    },
+  ],
+  closingLabel: "The Impact",
+  closingText:
+    "Achieved 94% enterprise adoption of dApp Protection and significantly reduced phishing attempts, gave institutional traders a safety net against blind-signing errors, and delivered zero successful exploit incidents among users who actively used the Allowance Manager.",
 };
 
 export function TransactionSecurity() {
@@ -80,5 +85,5 @@ export function TransactionSecurity() {
     }
   }, [location.pathname, navigate]);
 
-  return <ProjectPage project={project} />;
+  return <InitiativePage project={project} />;
 }
